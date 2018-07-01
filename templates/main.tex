@@ -1,0 +1,141 @@
+\documentclass[Portugues]{ic-tese-v3}
+%\documentclass[10pt]{article}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+%\usepackage[backend=biber, sorting=none]{biblatex}
+\usepackage{csquotes}
+\usepackage{docmute}
+\usepackage{ragged2e}
+\usepackage[T1]{fontenc}
+\usepackage{complexity}
+\usepackage{graphicx,url}
+\usepackage{psfrag}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+%\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+%\usepackage[alf]{abntex2cite}
+
+%Pacote extra para algoritmos
+\usepackage[portuguese, ruled, linesnumbered]{algorithm2e}
+
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{gray}{rgb}{0.34,0.34,0.36}
+%Para colocar trechos de código
+\usepackage{listings}
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily\scriptsize,
+  keywordstyle=\color{blue},
+  stringstyle=\color{darkgreen},
+  commentstyle=\color{gray},
+  extendedchars=false,
+  showspaces=false,
+  showstringspaces=false,
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true,
+  backgroundcolor=\color{blue!10},
+  breakautoindent=true,
+  captionpos=b,
+  xleftmargin=0pt,
+}
+
+% Para acrescentar comentários ao PDF descomente:
+\usepackage
+%  [pdfauthor={nome do autor},
+%   pdftitle={titulo},
+%   pdfkeywords={palavra-chave, palavra-chave},
+%   pdfproducer={Latex with hyperref},
+%   pdfcreator={pdflatex}]
+{hyperref}
+
+%\addbibresource{referencias.bib}
+
+\newcommand{\fromeng}[1]{\footnote{do inglês: \textit{#1}}}
+\newcommand{\tit}[1]{\textit{#1}}
+\newcommand{\tbf}[1]{\textbf{#1}}
+\newcommand{\ttt}[1]{\texttt{#1}}
+%--------------------------------------------------------------------
+%TEMPLATE ADAPTADO PARA OS TRABALHOS DO PROGRAMA DE FORMAÇÃO ANALYTICS
+%Fiquem a vontade para usar esse template, ele já contém dois pacotes para a escrita de código e para formalizar algoritmos.
+%Abraços! Qualquer dúvida podem me chamar no whats.
+%Guilherme Cano Lopes
+
+\begin{document}
+%--------------------------------------------------------------------
+%Pessoal, basta alterar as informações abaixo pra editar a capa
+\autor{Nome do Aluno}
+\titulo{TÍTULO DO PROJETO}
+
+\orientador{Nome do Professor}
+
+%(não mexer):
+\mestrado
+
+\datadadefesa{12}{09}{2018}
+\paginasiniciais
+%\begin{flushleft}
+
+%Comente a linha de baixo se não desejar usar um sumário
+%(remova o * dos comandos \chapter para que ele apareça no sumário)
+%\tableofcontents
+\fimdaspaginasiniciais
+%-------------------------------------------------------------------------
+
+\chapter*{1. Pacote para Algoritmos}
+%O pacote se chama algorithm2e, consultem a documentação pra entender seu uso.
+\begin{algorithm}[ht]
+   \SetAlgoLined
+   \Entrada{Grafo G(V,E) e coloração c (certificado).} 
+   \Saida{Verdadeiro ou Falso}
+   \Inicio{
+    \Para{cada aresta $(u,v) \in E$}{
+    \Se{c(u) = c(v)}{
+    \textbf{devolva} Falso
+    }
+    }  
+   \textbf{devolva} Verdadeiro
+   }
+   \label{alg2}
+   \caption{\textsc{Verificador($G,c$)}
+   }
+\end{algorithm}
+
+\chapter*{2. Escrita de código (configurado para Python)}
+%É possível configurar a linguagem editando as configurações do pacote no início deste .tex
+\begin{lstlisting}
+#codigo exemplo (nao use acentuacao nos comentarios que vao pra o lstlisting)
+def plot_3d(x,y,z,title=None,label="",id=0):
+    mpl.rcParams['legend.fontsize'] = 10
+
+    fig = plt.figure(id)
+    ax = fig.gca(projection='3d')
+    x = x.as_matrix()
+    y = y.as_matrix()
+    z = z.as_matrix()
+
+    ax.plot(x, y, z, label=label)
+    ax.legend(bbox_to_anchor=(0.3, 0.8))
+    if title is not None:
+        plt.title(title)
+
+def main():
+    plot_3d(x = data['x (Meters)'], y=data['y (Meters)'], z = data['z (Meters)'],label="Drone Position")
+    
+if __name__ == "__main__":
+   main() 
+\end{lstlisting}
+
+Para citar trabalhos, use o comando \cite{lopes2014elastic}. 
+
+%Referências
+\newpage
+\bibliographystyle{IEEEtran}
+\bibliography{referencias}
+
+\end{document}

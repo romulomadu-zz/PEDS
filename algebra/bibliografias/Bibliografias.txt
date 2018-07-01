@@ -1,0 +1,20 @@
+Fala galera,
+
+Vou mandar quatro artigos aqui que estão me ajudando a fazer a resenha pro exercício do Guterres!
+
+Marquezan 2002 - Análise de Complexidade e Desempenho de Algoritmos para Multiplicação de Matrizes
+(Esse é o que mais me ajudou aqui. Ele mostra o algoritmo tradicional, o de strassen e o de Winograd... Sempre mostrando vantagens e desvantagens!
+http://www.lbd.dcc.ufmg.br/colecoes/erad-rs/2002/0012.pdf
+
+Robinson 2005 - Toward an Optimal Algorithm for Matrix Multiplication
+Também faz uma revisãozinha ai, só que mais simples.
+https://pdfs.semanticscholar.org/e909/5371ebb4827236a80f0851a8db77ec1aad76.pdf
+
+Williams 2012 e Le Gall 2014– Os dois propõem (e parece que conseguem) métodos mais rápidos pra multiplicação das matrizes. Confesso que não me aprofundei em como eles fizeram isso hahahahah
+Le Gall 2014 > https://arxiv.org/pdf/1401.7714
+
+Williams 2012  > http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.297.2680&rep=rep1&type=pdf
+
+Quem quiser o .pdf me chama lá no Skype que eu mando direto ;)
+
+leonardo.viggiano@itau-unibanco.com.br
