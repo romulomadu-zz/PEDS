@@ -1,2 +1,6 @@
 /﻿confidencial
 .ipynb_checkpoints
+.RData
+.Rhistory
+notebook.tex
+*.html
